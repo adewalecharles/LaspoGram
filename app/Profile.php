@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace LaspoGram;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,7 +20,7 @@ class Profile extends Model
     }
     public function comments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('LaspoGram\Comment');
     }
     public function user()
     {

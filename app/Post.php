@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace LaspoGram;
 
 use Illuminate\Database\Eloquent\Model;
 // use Laravel\Scout\Searchable;
@@ -16,6 +16,6 @@ class Post extends Model
 
 public function comments()
 {
-  return $this->hasMany('App\Comment');
+  return $this->hasMany('LaspoGram\Comment');
 }
 }

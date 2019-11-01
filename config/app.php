@@ -169,12 +169,12 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        LaspoGram\Providers\AppServiceProvider::class,
+        LaspoGram\Providers\AuthServiceProvider::class,
+        // LaspoGram\Providers\BroadcastServiceProvider::class,
+        LaspoGram\Providers\EventServiceProvider::class,
+        LaspoGram\Providers\TelescopeServiceProvider::class,
+        LaspoGram\Providers\RouteServiceProvider::class,
 
     ],
 

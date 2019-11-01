@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace LaspoGram;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Presenters\DatePresenter;
+use LaspoGram\Presenters\DatePresenter;
 class Comment extends Model
 {
 //   use DatePresenter;
@@ -13,11 +13,11 @@ class Comment extends Model
  
   public function post()
   {
-    return $this->belongsTo('App\Post');
+    return $this->belongsTo('LaspoGram\Post');
   }
  
   public function user()
   {
-    return $this->belongsTo('App\User');
+    return $this->belongsTo('LaspoGram\User');
   }
 }

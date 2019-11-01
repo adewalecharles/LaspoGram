@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace LaspoGram\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

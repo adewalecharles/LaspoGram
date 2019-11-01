@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace LaspoGram\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use LaspoGram\User;
 
 class FollowsController extends Controller
 {
