@@ -21,7 +21,7 @@
 </head>  
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-blue shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div><img src="/svg/laspogram.svg" style="height: 20px; border-right: 1px solid #333;" class="pr-3"></div>
@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                    
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -50,20 +50,43 @@
                                 </li>
                             @endif
                         @else
+                        <li>
+                        <form class="search-form" role="search">
+                        <div class="form-group md-form mt-0 mr-2 pt-2">
+                        <i class="fa fa-fw fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        </form>
+                         </li>
+
+                          <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Members</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Messages</span></a>
+                        </li>
+
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Notifications</span></a>
+                        </li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile/{{$post->user->id}}">
+                                      
+                                      {{__('Profile') }}
+                                  </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
-                                    <a class="dropdown-item" href="/profile/{{$post->user->id}}">
-                                      
-                                        {{__('Profile') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
