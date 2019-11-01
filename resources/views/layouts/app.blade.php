@@ -18,7 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>  
+
+</head> 
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-blue shadow-sm">
@@ -52,12 +54,16 @@
                         @else
                         <li>
                         <form class="search-form" role="search">
-                        <div class="form-group md-form mt-0 mr-2 pt-2">
-                        <i class="fa fa-fw fa-search"></i>
+                        <div class="form-group md-form mt-0 pt-1">
+                        <span><i class="fa fa-search"></i></span>
                         <input type="text" class="form-control" placeholder="Search">
                         </div>
                         </form>
                          </li>
+
+                         <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span></a>
+                        </li>
 
                           <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Members</span></a>
@@ -67,7 +73,7 @@
                         <a class="nav-link" href="#"><i class="fa fa-fw fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Messages</span></a>
                         </li>
 
-                        
+                    
                         <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Notifications</span></a>
                         </li>
@@ -78,10 +84,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/profile/{{$post->user->id}}">
-                                      
-                                      {{__('Profile') }}
-                                  </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
