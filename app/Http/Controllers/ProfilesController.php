@@ -1,7 +1,7 @@
 <?php
 
-namespace LaspoGram\Http\Controllers;
-use LaspoGram\User;
+namespace App\Http\Controllers;
+use App\User;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;

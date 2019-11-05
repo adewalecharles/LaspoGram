@@ -1,12 +1,12 @@
 <?php
 
-namespace LaspoGram\Http\Controllers;
+namespace App\Http\Controllers;
 
-use LaspoGram\Comment;
-use LaspoGram\Post;
+use App\Comment;
+use App\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use LaspoGram\Http\Requests\CommentRequest;
+use App\Http\Requests\CommentRequest;
 
 class CommentsController extends Controller
 {
