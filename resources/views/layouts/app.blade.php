@@ -66,7 +66,7 @@
                         </li>
 
                           <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Members</span></a>
+                        <a class="nav-link" href="/members"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Members</span></a>
                         </li>
 
                         <li class="nav-item">

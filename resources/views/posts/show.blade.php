@@ -27,6 +27,15 @@
           <span class="text-dark">{{$post->user->username}}</span>
           </a> </span> {{$post->caption}}</p>
           </div>
+          <div>
+        @forelse ($post->comments as $comment)
+        <div><p> <a href="/profile/{{$comment->user->id}}">{{ $comment->user->username }} </a>--> {{ $comment->body }}</p></div>
+        <hr>
+        @empty
+        <div><p>This post has no comments</p></div>
+        
+        @endforelse
+        </div>
         </div>
         </div>
     </div>

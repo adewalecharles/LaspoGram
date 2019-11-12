@@ -15,17 +15,19 @@
           <p> <span class="font-weight-bold">
           <a href="/profile/{{$post->user->id}}">
           <span class="text-dark">{{$post->user->username}}</span>
-          </a> </span> {{$post->caption}}</p> <p><span>{{$post->comments}}</span></p>
+          </a> </span> {{$post->caption}}</p> 
+          <div><p>{{$post->comments->count()}} | <font style="font-weight:bold; color:blue;">Comments</font></p> </div>
           </div>
-          @forelse ($post->comments as $comment)
-  <p>{{ $comment->user->name }} {{$comment->created_at}}</p>
-  <p>{{ $comment->body }}</p>
-  <hr>
-@empty
-  <p>This post has no comments</p>
-@endforelse
           <div>
-          <form action="/p" enctype="multipart/form-data" method="post">
+        @forelse ($post->comments as $comment)
+        <div><p> <a href="/profile/{{$comment->user->id}}">{{ $comment->user->username }}</a> --> {{ $comment->body }}</p></div>
+        <hr>
+        @empty
+        <div><p>This post has no comments</p></div>
+        @endforelse
+        </div>
+          <div>
+          <form action="{{ route('Comments.store') }}" enctype="multipart/form-data" method='post'>
         @csrf
         <div class="form-group row">
                             <label for="comments" class="col-md-4 col-form-label">Post Comments</label>
